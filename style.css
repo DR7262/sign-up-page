@@ -1,11 +1,29 @@
 body {
-    background-image: url('img/night.jpeg');
+    background: no-repeat fixed 50% 50% /80% url('img/night.jpeg');
     background-size: cover;
     height: 100vh;
     margin: 0;
 }
 
 .main {
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     height: 100vh;
 }
+
+.window {
+    flex: 50%;
+}
+
+.forms {
+    flex: 50%;
+    background-color: slategrey;
+}
+
+@media (max-width: 800px) {
+    .main {
+      flex-direction: column;
+      height: 200vh;
+    }
+  }
