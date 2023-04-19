@@ -37,18 +37,31 @@ body {
     color: white;
 }
 
-.forms {
+.signup-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex: 1;
+    flex: wrap;
     background-color: rgb(42, 29, 18);
     padding: 1.5rem;
-    padding-top: 0;
+    padding-top: 1.5rem;
     color: wheat;
+}
+
+.forms {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
+    margin: 1rem;
+    margin-left: 0;
+    flex: 1;
+    min-width: 15rem;
 }
 
 @media (max-width: 800px) {
