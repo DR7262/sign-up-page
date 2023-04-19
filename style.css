@@ -13,17 +13,40 @@ body {
 }
 
 .window {
-    flex: 50%;
+    flex: 1;
+    position: relative;
+}
+
+.credit {
+    position: absolute;
+    left: 1rem;
+    bottom: 0;
+}
+
+.credit,
+.credit > a {
+    color: rgb(255, 255, 255, .25) ;
+    font-size: 1rem;
+}
+
+.credit > a:hover {
+    color: white;
 }
 
 .forms {
-    flex: 50%;
-    background-color: slategrey;
+    flex: 1;
+    background-color: rgb(42, 29, 18);
+    padding: 2rem;
+    padding-top: 0;
+    color: wheat;
 }
 
 @media (max-width: 800px) {
     .main {
       flex-direction: column;
       height: 200vh;
+    }
+    .credit {
+        top: 0;
     }
   }
