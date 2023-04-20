@@ -133,6 +133,7 @@ input:not(:placeholder-shown):not(:focus):invalid {
 
 .form:has(input:placeholder-shown:not(:focus)) input::placeholder {
     transform: translateY(0);
+    color: none;
 }
 
 input,
