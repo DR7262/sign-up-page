@@ -85,7 +85,26 @@ body {
     min-width: 15rem;
 }
 
+label, 
 input {
+    transition-timing-function: ease;
+    transition-duration: .25s;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:not(:placeholder-shown):not(:focus):invalid {
+    background-color: rgb(255, 127, 127);
+}
+
+.form:has(input:placeholder-shown) label{
+    color:rgb(42, 29, 18);
+}
+
+input,
+input:placeholder-shown {
     height: 1.5rem;
     background-color: rgb(244, 234, 215);
     border: 0;
@@ -98,7 +117,7 @@ input {
 @media (max-width: 800px) {
     .main {
       flex-direction: column;
-      height: 260vh;
+      height: 240vh;
     }
     .credit {
         top: 0;
