@@ -85,6 +85,11 @@ body {
     min-width: 15rem;
 }
 
+label {
+    transform: translateY(0px);
+    z-index: 1;
+}
+
 label, 
 input {
     transition-timing-function: ease;
@@ -101,6 +106,7 @@ input:not(:placeholder-shown):not(:focus):invalid {
 
 .form:has(input:placeholder-shown) label{
     color:rgb(42, 29, 18);
+    transform: translateY(18px);
 }
 
 input,
@@ -111,7 +117,8 @@ input:placeholder-shown {
     border-radius: 9px;
     border-top-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    padding: .25rem
+    padding: .25rem;
+    z-index: 2;
 }
 
 @media (max-width: 800px) {
