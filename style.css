@@ -148,8 +148,46 @@ input:placeholder-shown {
     z-index: 2;
 }
 
-button {
+.signup-btn {
     margin: 1.5rem;
+    margin-top: .5rem;
+    max-width: 10rem;
+    min-height: 2rem;
+    font-weight: bold;
+    color: wheat;
+    background-color: rgb(130, 67, 0);
+    border-radius: 9px;
+    border: 0px;
+    box-shadow: 0px 3px 3px rgb(0, 0, 0, .75);
+    transition-duration: .05s;
+}
+
+.signup-btn:hover {
+    background-color: rgb(171, 75, 0);
+    transform: scale(101%);
+}
+
+.signup-btn:active {
+    background-color: rgb(171, 88, 0);
+    transform: scale(99%);
+    box-shadow: 0px 1px 3px rgb(0, 0, 0, .75)
+}
+
+.member-reminder {
+    padding: 1.5rem;
+    padding-top: 0;
+    margin-top: 0;
+    font-size: .8rem;
+}
+
+.login {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(239, 191, 139);
+}
+
+.login:hover {
+    color: rgb(213, 165, 114);
 }
 
 @media (max-width: 800px) {
