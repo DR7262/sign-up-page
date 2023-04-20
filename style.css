@@ -99,10 +99,16 @@ label {
     z-index: 1;
 }
 
+input::placeholder {
+    transform: translateY(-22px);
+    transition-timing-function: ease-in-out;
+    transition-duration: .15s;
+}
+
 label, 
 input {
     transition-timing-function: ease;
-    transition-duration: .25s;
+    transition-duration: .20s;
 }
 
 input:hover,
@@ -120,9 +126,13 @@ input:not(:placeholder-shown):not(:focus):invalid {
     background-color: rgb(255, 127, 127);
 }
 
-.form:has(input:placeholder-shown) label{
+.form:has(input:placeholder-shown:not(:focus)) label{
     color:rgb(42, 29, 18);
     transform: translateY(18px);
+}
+
+.form:has(input:placeholder-shown:not(:focus)) input::placeholder {
+    transform: translateY(0);
 }
 
 input,
