@@ -95,6 +95,10 @@ body {
     min-width: 15rem;
 }
 
+.form:has(p.reminder) {
+    margin-bottom: .15rem;
+}
+
 label {
     transform: translateY(0px);
     z-index: 1;
@@ -127,6 +131,10 @@ input:not(:placeholder-shown):not(:focus):invalid {
     background-color: rgb(255, 127, 127);
 }
 
+.form:has(input:valid:not(:focus)) p.reminder {
+    color: rgb(0, 0, 0, 0);
+}
+
 .form:has(input:placeholder-shown:not(:focus)) label{
     color:rgb(42, 29, 18);
     transform: translateY(18px);
@@ -134,6 +142,10 @@ input:not(:placeholder-shown):not(:focus):invalid {
 
 .form:has(input:placeholder-shown:not(:focus)) input::placeholder {
     transform: translateY(0);
+}
+
+.form:has(input:focus) p.reminder{
+    transform: translateY(0px);
 }
 
 input,
@@ -146,6 +158,15 @@ input:placeholder-shown {
     border-bottom-right-radius: 0px;
     padding: .25rem;
     z-index: 2;
+}
+
+.reminder {
+    padding: 0;
+    margin: 0;
+    font-size: .75rem;
+    z-index: 1;
+    transform: translateY(-20px);
+    transition-duration: .20s;
 }
 
 .signup-btn {
@@ -204,5 +225,9 @@ input:placeholder-shown {
   { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
     ::-webkit-input-placeholder {
         color:rgb(0, 0, 0, 0);
+    }
+
+    p.reminder {
+        transform: translateY(0);
     }
   }}
