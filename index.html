@@ -25,7 +25,7 @@
             <div class="forms">
                 <div class = "first-name form">
                     <label for="first-name">First Name</label>
-                    <input type="text" required name="first-name" id="first-name" placeholder="First Name" minlength="2" >
+                    <input type="text" required name="first-name" id="first-name" placeholder="First Name" minlength="1">
                 </div>
                 
                 <div class="last-name form">
@@ -35,18 +35,22 @@
                 
                 <div class="e-mail form">
                     <label for="e-mail">E-mail Address</label>
-                    <input type="email" required name="e-mail" id="e-mail" placeholder="E-mail Address">
+                    <input type="email" required name="e-mail" id="e-mail" placeholder="E-mail Address"
+                     title="Please enter a valid e-mail address">
                     <p class="reminder">e.g. user@example.com</p>
                 </div>
                 
                 <div class="mobile form">
                     <label for="mobile">Mobile Number</label>
-                    <input type="tel" required name="mobile" id="mobile" placeholder="Mobile Number" title="Please enter an AU mobile, e.g. 0432082030 / +61432202343" required>
+                    <input type="tel" required name="mobile" id="mobile" placeholder="Mobile Number"
+                     title="Please enter an AU mobile, e.g. 0432082030 / +61432202343"
+                     pattern="^[+0]?[6]?[1]?[\-]?[45]\d{2}[\-]?\d{3}[\-]?\d{3}">
                 </div>
                 
                 <div class="pw form">
                     <label for="pw">Password</label>
-                    <input type="password" required name="pw" id="pw" placeholder="Password">
+                    <input type="password" required name="pw" id="pw" placeholder="Password"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*&#40;]).{8,}">
                     <p class="reminder">must include one symbol and one number</p>
                 </div>
                 
