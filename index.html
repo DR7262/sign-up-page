@@ -43,15 +43,17 @@
                 <div class="mobile form">
                     <label for="mobile">Mobile Number</label>
                     <input type="tel" required name="mobile" id="mobile" placeholder="Mobile Number"
-                     title="Please enter an AU mobile, e.g. 0432082030 / +61432202343"
+                     title="Please enter an AU mobile, e.g. 0432123456 / +61432123456"
                      pattern="^[+0]?[6]?[1]?[\-]?[45]\d{2}[\-]?\d{3}[\-]?\d{3}">
+                     <p class="reminder" style = "font-size: .65rem;">e.g. 0432123456 / +61432123456</p>
                 </div>
                 
                 <div class="pw form">
                     <label for="pw">Password</label>
                     <input type="password" required name="pw" id="pw" placeholder="Password"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*&#40;]).{8,}">
-                    <p class="reminder">must include one symbol and one number</p>
+                    title = "Please make a password 8 characters long using letters and at least one symbol and number"
+                    pattern="(?=.*\d)(?=.*[a-z, A-Z])(?=.*[!@#$%^&*&#40;]).{8,}">
+                    <p class="reminder">needs at least one symbol, letter and number</p>
                 </div>
                 
                 <div class="pw-confirm form">
