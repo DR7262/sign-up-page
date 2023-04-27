@@ -132,7 +132,8 @@ input:not(:placeholder-shown):not(:focus):invalid {
 }
 
 .form:has(input:valid:not(:focus)) p.reminder {
-    color: rgb(0, 0, 0, 0);
+    opacity: 0;
+    visibility: hidden;
 }
 
 .form:has(input:not(:placeholder-shown):not(:focus)) p.reminder {
@@ -162,6 +163,20 @@ input:placeholder-shown {
     border-bottom-right-radius: 0px;
     padding: .25rem;
     z-index: 2;
+}
+
+input:valid:focus {
+    outline: 1px solid green;
+    outline-offset: -1px;
+}
+
+input:valid:not(:focus) {
+    outline: 2px solid green;
+    outline-offset: -2px;
+}
+
+.form:has(input:valid) label:after{
+    content: ' ✓';
 }
 
 .reminder {
