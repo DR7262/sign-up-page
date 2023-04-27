@@ -58,7 +58,8 @@
                 
                 <div class="pw-confirm form">
                     <label for="pw">Confirm Password</label>
-                    <input type="password" required name="pw-confirm" id="pw-confirm" placeholder="Confirm Password">
+                    <input type="password" name="pw-confirm" id="pw-confirm" placeholder="Confirm Password" minlength="8">
+                    <p class="reminder">passwords must match</p>
                 </div>
             </div>
                 
@@ -68,4 +69,32 @@
         </div>
     </div>
 </body>
+<script>
+    pw = document.getElementById('pw')
+
+    pw2 = document.getElementById('pw-confirm')
+
+    pw2.validity.valid = false;
+    pw2.setCustomValidity('False');
+
+    pw2.addEventListener("input", (e) => {
+        let isPwMatch = pw.value === pw2.value;
+        if (isPwMatch && pw.validity.valid) {
+            pw2.setCustomValidity('');
+        }
+        else {
+            pw2.setCustomValidity('False');
+        }
+    })
+
+    pw.addEventListener("input", (e) => {
+        let isPwMatch = pw.value === pw2.value;
+        if (isPwMatch && pw.validity.valid) {
+            pw2.setCustomValidity('');
+        }
+        else {
+            pw2.setCustomValidity('False');
+        }
+    })
+</script>
 </html>
