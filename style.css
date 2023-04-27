@@ -157,6 +157,9 @@ input:placeholder-shown {
     height: 1.5rem;
     background-color: rgb(244, 234, 215);
     border: 0;
+    border-radius: 0px;
+    border-bottom-left-radius: 9px;
+    border-top-right-radius: 9px;
     outline: 2px solid grey;
     outline-offset: -2px;
     padding: .25rem;
@@ -247,5 +250,18 @@ input:valid {
 
     p.reminder {
         transform: translateY(0);
+        margin-left: 3px;
+    }
+
+    input,
+    input:placeholder-shown {
+        border-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    label {
+        margin-left: 3px;
+        margin-bottom: 2px;
     }
   }}
